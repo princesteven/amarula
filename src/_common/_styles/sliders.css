@@ -1,0 +1,32 @@
+.section-content::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid white;
+    transform: translate(-50%, -50%);
+}
+
+/*div.section-content::before, div.section-content::after {*/
+/*    content: "";*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    top: -30px;*/
+/*    width: 50%;*/
+/*    height: 30px;*/
+/*    background-color: rgb(244 244 245);*/
+/*}*/
+
+/*div.section-content::before {*/
+/*    left: -13px;*/
+/*    transform: skewX(40deg);*/
+/*}*/
+
+/*div.section-content::after {*/
+/*    right: -13px;*/
+/*    transform: skewX(-40deg);*/
+/*}*/
