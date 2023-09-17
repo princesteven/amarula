@@ -3,11 +3,17 @@
 import React from 'react';
 import Image from "next/image";
 import {AiFillStar} from 'react-icons/ai';
-import {packages} from "../../_db/packages";
+import {packages} from "../../../_db/packages";
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {Autoplay, Navigation, Pagination} from "swiper/modules";
+import {Autoplay, Navigation} from "swiper/modules";
 
-const GridSlider = () => {
+/**
+ * @function
+ * @name PackageSlider
+ * @description Slider for showing pricing packages offered by amarula hotel
+ * @author Prince Erick Steven
+ */
+const PackageSlider = () => {
     return (
         <div className="w-11/12 md:w-5/4 lg:w-3/4 mx-auto">
             <Swiper
@@ -61,4 +67,4 @@ const GridSlider = () => {
     )
 };
 
-export default GridSlider;
+export default PackageSlider;

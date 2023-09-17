@@ -1,32 +1,25 @@
-.section-content::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-top: 40px solid white;
-    transform: translate(-50%, -50%);
+/* Swiper styles */
+.swiper-button-prev, .swiper-button-next {
+    color: white;
+    display: none;
+    font-size: 1px;
 }
 
-/*div.section-content::before, div.section-content::after {*/
-/*    content: "";*/
-/*    display: block;*/
-/*    position: absolute;*/
-/*    top: -30px;*/
-/*    width: 50%;*/
-/*    height: 30px;*/
-/*    background-color: rgb(244 244 245);*/
-/*}*/
+.swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 3px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
 
-/*div.section-content::before {*/
-/*    left: -13px;*/
-/*    transform: skewX(40deg);*/
-/*}*/
-
-/*div.section-content::after {*/
-/*    right: -13px;*/
-/*    transform: skewX(-40deg);*/
-/*}*/
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #ffffff;
+}
+/* Swiper styles */

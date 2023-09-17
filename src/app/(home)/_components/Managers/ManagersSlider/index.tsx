@@ -2,12 +2,17 @@
 
 import React from 'react';
 import Image from "next/image";
-import {AiFillStar} from 'react-icons/ai';
-import {packages} from "../../../_db/packages";
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {Autoplay, Navigation, Pagination} from "swiper/modules";
+import {managers} from "../../../_db/management";
+import {Autoplay, Navigation} from "swiper/modules";
 
-const GridSlider = () => {
+/**
+ * @function
+ * @name ManagementSlider
+ * @description Slider for showing amarula management
+ * @author Prince Erick Steven
+ */
+const ManagementSlider = () => {
     return (
         <div className="w-11/12 md:w-5/4 lg:w-3/4 mx-auto">
             <Swiper
@@ -35,24 +40,22 @@ const GridSlider = () => {
                 }}
                 modules={[Autoplay, Navigation]}
             >
-                {packages.map((amarulaPackage) => <SwiperSlide key={Math.random()}>
+                {managers.map((manager) => <SwiperSlide key={Math.random()}>
                     <div className="w-full">
                         <Image
-                            src={amarulaPackage.image}
-                            alt={amarulaPackage.imageDescription}
+                            src={manager.image}
+                            alt={manager.imageDescription}
                             style={{
                                 width: '100%',
                                 height: '300px'
                             }}
                         />
                         <div className="border-t px-3 py-5 bg-white">
-                            <div className="font-medium flex justify-between">
-                                <div className={"uppercase"}>{amarulaPackage.name}</div>
-                                <div className="flex text-amber-500">
-                                    {Array(amarulaPackage.stars).fill(0).map(() => <AiFillStar key={Math.random()}/>)}
-                                </div>
+                            <div className="flex justify-between">
+                                <div className={"uppercase font-semibold"}>{manager.name}</div>
+                                <div className="flex text-amber-500 text-sm">{manager.title}</div>
                             </div>
-                            <div className={"font-thin text-black/40 pt-3 text-sm"}>{amarulaPackage.description}</div>
+                            <div className={"font-thin text-black/40 pt-3 text-sm"}>{manager.description}</div>
                         </div>
                     </div>
                 </SwiperSlide>)}
@@ -61,4 +64,4 @@ const GridSlider = () => {
     )
 };
 
-export default GridSlider;
+export default ManagementSlider;

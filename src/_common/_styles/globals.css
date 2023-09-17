@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +8,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --swiper-theme-color: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +20,59 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Poppins', sans-serif;
+  /*color: rgb(var(--foreground-rgb));*/
+  /*background: linear-gradient(*/
+  /*    to bottom,*/
+  /*    transparent,*/
+  /*    rgb(var(--background-end-rgb))*/
+  /*  )*/
+  /*  rgb(var(--background-start-rgb));*/
 }
+
+.section-content::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid white;
+  transform: translate(-50%, -50%);
+}
+
+/* Animation for slider words in Homepage */
+div.slider-subtitle > span.fadeInDown {
+  -moz-animation: fadeInDown 2s linear 1s;
+  -webkit-animation: fadeInDown 2s linear 1s;
+  -o-animation: fadeInDown 2s linear 1s;
+  -ms-animation: fadeInDown 2s linear 1s;
+  animation: fadeInDown 2s linear 1s;
+}
+
+div.slider-title > h2.fadeInLeft {
+  -moz-animation: fadeInLeft 2s linear 1s;
+  -webkit-animation: fadeInLeft 2s linear 1s;
+  -o-animation: fadeInLeft 2s linear 1s;
+  -ms-animation: fadeInLeft 2s linear 1s;
+  animation: fadeInLeft 2s linear 1s;
+}
+
+div.slider-title > h2.fadeInRight {
+  -moz-animation: fadeInRight 2s linear 1s;
+  -webkit-animation: fadeInRight 2s linear 1s;
+  -o-animation: fadeInRight 2s linear 1s;
+  -ms-animation: fadeInRight 2s linear 1s;
+  animation: fadeInRight 2s linear 1s;
+}
+
+div.slider-btnText > button.fadeInUp {
+  -moz-animation: fadeInUp 2s linear 1s;
+  -webkit-animation: fadeInUp 2s linear 1s;
+  -o-animation: fadeInUp 2s linear 1s;
+  -ms-animation: fadeInUp 2s linear 1s;
+  animation: fadeInUp 2s linear 1s;
+}
+/* Animation for slider words in Homepage End */
